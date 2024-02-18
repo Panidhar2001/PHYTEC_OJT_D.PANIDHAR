@@ -1,0 +1,56 @@
+ Degree of Multiprogramming
+ 
+ 
+The process of controlling and coordinating computer memory, assigning portions known as blocks to various running programs to optimize the overall performance of the system is called Memory Management.
+The degree of multiprogramming describes the maximum number of processes that a single-processor system can accommodate efficiently.
+ 
+ 
+bring more and more process from secondary memory to primary(RAM) so that utilization of
+ CPU increased.and hence efficency of system gets increased.
+ 
+ Higher the degree of multiprogramming higher the utilization of CPU.
+ 
+ 
+ process executed in two ways either on CPU or want to make some i/o request 
+
+lets take an example
+
+1.
+let say Ram of size 4mb and a process of size 4mb 
+then ony 1 process fits in ram
+and say K is the time for which it performes i/o operation 
+it executed on CPU= 1-K time
+therefore CPU Utilization= 1-K lets say 70% it perform i/o operation
+Then cpu utilization= 30%
+
+2.
+let say Ram of size 8mb and a process of size 4mb 
+2 process can fits on RAM
+CPU utilization= 1-K*k   =(1-.49)=51%
+
+3.
+let say Ram of size 16mb and a process of size 4mb 
+ 4 process can fits on RAM
+ CPU Utilization = 1-K*K*K*K =(1-.2401)=76%
+ 
+ 
+ 
+ Degree of multiprogramming is a concept in computer operating systems that measures the number of processes or programs that can be concurrently executed or reside in the memory of a computer system at any given time. It is an important parameter that helps determine the efficiency and resource utilization of the operating system and the overall performance of a computer system. Here's a more detailed explanation of the degree of multiprogramming:
+
+1. **Concurrent Execution**: In a multitasking or multi-user operating system, multiple processes or programs can run simultaneously. The degree of multiprogramming defines how many processes can be in various states of execution concurrently. These states typically include running, ready, and blocked.
+
+2. **Memory Management**: The degree of multiprogramming is closely related to memory management. It determines how many processes can be loaded into and maintained in the system's memory at once. When a process is running, it consumes memory for its code, data, and stack, and this allocation needs to be managed efficiently to make the best use of available resources.
+
+3. **Resource Utilization**: A higher degree of multiprogramming generally leads to better resource utilization. It ensures that the CPU and other system resources are kept busy, reducing idle time. This is particularly important in time-sharing and multi-user systems where multiple users expect responsive performance.
+
+4. **Throughput**: Degree of multiprogramming influences the throughput of the system. With more processes running concurrently, the system can achieve a higher throughput by executing tasks in parallel. This is important for achieving good system performance, especially in scenarios where there is a mix of CPU-bound and I/O-bound tasks.
+
+5. **Context Switching**: Managing a higher degree of multiprogramming often involves frequent context switching, which is the process of saving the state of one process and loading the state of another process into memory. While context switching allows for multitasking, it also introduces overhead. Therefore, an optimal balance must be maintained.
+
+6. **Memory Constraints**: The degree of multiprogramming is limited by the amount of physical memory available in the system. If the memory is insufficient to accommodate the required number of processes, the system may resort to swapping processes in and out of secondary storage, which can significantly impact performance.
+
+7. **Priority Scheduling**: In a multiprogramming environment, processes often have priorities assigned to them. The degree of multiprogramming can affect how well the system can prioritize and manage processes based on their priority levels.
+
+8. **Response Time**: The degree of multiprogramming can impact the response time experienced by users. A higher degree typically results in shorter response times because the system can quickly switch between tasks. However, this can also lead to more context switching overhead.
+
+In summary, the degree of multiprogramming is a critical aspect of operating system design and management. It influences how efficiently system resources are used, how well the system can respond to user requests, and the overall performance of the computer system. Balancing the degree of multiprogramming is a complex task that depends on the specific requirements and workload characteristics of the system.
